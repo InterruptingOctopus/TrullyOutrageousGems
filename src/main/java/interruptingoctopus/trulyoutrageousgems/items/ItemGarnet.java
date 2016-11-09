@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 public class ItemGarnet extends Item {
 	
 	public ItemGarnet() {
-		setUnlocalizedName(Reference.TogemsItems.GARNET.getUnlocalizedName());
 		setRegistryName(Reference.TogemsItems.GARNET.getRegistryName());
+		setUnlocalizedName(Reference.TogemsItems.GARNET.getUnlocalizedName());	
 	}
 
 }
