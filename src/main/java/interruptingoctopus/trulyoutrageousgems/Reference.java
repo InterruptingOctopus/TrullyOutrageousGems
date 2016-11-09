@@ -32,7 +32,7 @@ public class Reference {
 		}
 	}
 	public static enum TogemsBlocks{
-		GARNETBLOCK("garnetBlock", "BlockGarnetBLock");
+		GARNETBLOCK("garnetBlock", "BlockGarnetBlock");
 		
 		private String unlocalizedName;
 		private String registryName;
