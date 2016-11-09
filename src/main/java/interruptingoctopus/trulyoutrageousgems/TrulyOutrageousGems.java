@@ -1,5 +1,6 @@
 package interruptingoctopus.trulyoutrageousgems;
 
+import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import interruptingoctopus.trulyoutrageousgems.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +27,9 @@ public class TrulyOutrageousGems {
 		
 		ModItems.init();
 		ModItems.register();
+		
+		ModBlocks.init();
+		ModBlocks.register();
 	}
 	
 	@EventHandler

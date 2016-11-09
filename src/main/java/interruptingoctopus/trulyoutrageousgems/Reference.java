@@ -31,4 +31,26 @@ public class Reference {
 			return unlocalizedName;
 		}
 	}
+	public static enum TogemsBlocks{
+		GARNETBLOCK("garnetBlock", "BlockGarnetBLock");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		TogemsBlocks(String unlocalizedName, String registryName){
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getRegistryName() 
+		{
+			return registryName;
+		}
+		
+		public String getUnlocalizedName() 
+		{
+			return unlocalizedName;
+		}
+	}
+		
 }

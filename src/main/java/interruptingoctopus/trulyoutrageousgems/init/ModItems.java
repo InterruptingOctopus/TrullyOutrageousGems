@@ -25,10 +25,7 @@ public class ModItems {
 	
 	private static void registerRender(Item item) {
 		System.out.println(item.getRegistryName());
-<<<<<<< HEAD
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName(), "inventory"));
-=======
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
->>>>>>> master
+
 	}
 }
