@@ -10,13 +10,13 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "interruptingoctopus.trulyoutrageousgems.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "interruptingoctopus.trulyoutrageousgems.proxy.ServerProxy";
 	
-	public static enum TOGItems{
+	public static enum TogemsItems{
 		GARNET("garnet", "ItemGarnet");
 		
 		private String unlocalizedName;
 		private String registryName;
 		
-		TOGItems(String unlocalizedName, String registryName){
+		TogemsItems(String unlocalizedName, String registryName){
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
 		}
