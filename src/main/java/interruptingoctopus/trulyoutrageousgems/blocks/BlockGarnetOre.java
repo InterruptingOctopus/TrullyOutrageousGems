@@ -4,12 +4,12 @@ import interruptingoctopus.trulyoutrageousgems.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockGarnetBlock extends Block {
+public class BlockGarnetOre extends Block {
 
-	public BlockGarnetBlock() {
+	public BlockGarnetOre() {
 		super(Material.ROCK);
-		setUnlocalizedName(Reference.TogemsBlocks.GARNETBLOCK.getUnlocalizedName());
-		setRegistryName(Reference.TogemsBlocks.GARNETBLOCK.getRegistryName());
+		setUnlocalizedName(Reference.TogemsBlocks.GARNETORE.getUnlocalizedName());
+		setRegistryName(Reference.TogemsBlocks.GARNETORE.getRegistryName());
 		setHardness(5.0F);
 		}
 
