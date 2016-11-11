@@ -16,8 +16,7 @@ import net.minecraft.world.World;
 public class BlockGarnetOre extends Block {
 	
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(1.875, 0, 1.875, 7.5, 5.625, 7.5);
-	private static final AxisAlignedBB COLLISION_BOX = new AxisAlignedBB(1.875, 0, 1.875, 7.5, 5.625, 7.5);
-
+	
 	public BlockGarnetOre() {
 		super(Material.ROCK);
 		setUnlocalizedName(Reference.TogemsBlocks.GARNETORE.getUnlocalizedName());
@@ -34,10 +33,10 @@ public class BlockGarnetOre extends Block {
 		return false;
 	}
 	
-	@Override
-	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.TRANSLUCENT;
-	}
+	//@Override
+	//public BlockRenderLayer getBlockLayer() {
+		//return BlockRenderLayer.TRANSLUCENT;
+	//}
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
@@ -46,7 +45,7 @@ public class BlockGarnetOre extends Block {
 	
 	@Override
 	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, Entity entityIn) {
-		super.addCollisionBoxToList(pos, entityBox, collidingBoxes, COLLISION_BOX);
+		super.addCollisionBoxToList(pos, entityBox, collidingBoxes, BOUNDING_BOX);
 	}
-
+	
 }
