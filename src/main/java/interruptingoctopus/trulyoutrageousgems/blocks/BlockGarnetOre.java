@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 
 public class BlockGarnetOre extends Block {
 	
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.625 * 3, 0, 0.625 * 3, 0.625 * 12, 0.625 * 9, 0.625 * 12);
+	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(1.875, 0, 1.875, 7.5, 5.625, 7.5);
 
 	public BlockGarnetOre() {
 		super(Material.ROCK);
