@@ -3,11 +3,13 @@ package interruptingoctopus.trulyoutrageousgems.blocks;
 import java.util.List;
 
 import interruptingoctopus.trulyoutrageousgems.Reference;
+import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -28,10 +30,10 @@ public class BlockGarnetOre extends Block {
 		setHarvestLevel("pickaxe", 2);
 	}
 
-	//@Override
-	//public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
-		//return this.
-	//};
+	@Override
+	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
+		return ModItems.garnet;
+	};
 	
 	@Override
 	public boolean isFullCube(IBlockState state) {
