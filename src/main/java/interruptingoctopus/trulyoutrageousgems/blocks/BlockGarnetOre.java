@@ -6,6 +6,7 @@ import interruptingoctopus.trulyoutrageousgems.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -21,8 +22,17 @@ public class BlockGarnetOre extends Block {
 		super(Material.ROCK);
 		setUnlocalizedName(Reference.TogemsBlocks.GARNETORE.getUnlocalizedName());
 		setRegistryName(Reference.TogemsBlocks.GARNETORE.getRegistryName());
+		setCreativeTab(CreativeTabs.MATERIALS);
 		setHardness(5.0F);
-		}
+		setResistance(20.0F);
+		setHarvestLevel("pickaxe", 2);
+	}
+
+	//@Override
+	//public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
+		//return this.
+	//};
+	
 	@Override
 	public boolean isFullCube(IBlockState state) {
 		return false;
