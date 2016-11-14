@@ -11,10 +11,12 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 
 public class BlockGarnetOre extends Block {
 	
@@ -29,6 +31,8 @@ public class BlockGarnetOre extends Block {
 		setResistance(20.0F);
 		setHarvestLevel("pickaxe", 2);
 	}
+	
+	
 
 	@Override
 	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
