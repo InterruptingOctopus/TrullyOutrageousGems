@@ -3,6 +3,7 @@ package interruptingoctopus.trulyoutrageousgems.blocks;
 import java.util.List;
 
 import interruptingoctopus.trulyoutrageousgems.Reference;
+import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -31,7 +32,7 @@ public class BlockGarnetOre extends Block {
 		super(Material.ROCK);
 		setUnlocalizedName(Reference.TogemsBlocks.GARNETORE.getUnlocalizedName());
 		setRegistryName(Reference.TogemsBlocks.GARNETORE.getRegistryName());
-		setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(TrulyOutrageousGems.CREATIVE_TAB);
 		setHardness(5.0F);
 		setResistance(20.0F);
 		setHarvestLevel("pickaxe", 2);
