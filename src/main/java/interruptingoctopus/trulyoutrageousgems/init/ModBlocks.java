@@ -2,6 +2,7 @@ package interruptingoctopus.trulyoutrageousgems.init;
 
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
+import interruptingoctopus.trulyoutrageousgems.blocks.BlockJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.items.ItemGarnet;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -14,16 +15,19 @@ public class ModBlocks {
 	
 	public static Block garnetBlock;
 	public static Block garnetOre;
+	public static Block jewelersTable;
 
 	public static void init() {
 		garnetBlock = new BlockGarnetBlock();
 		garnetOre = new BlockGarnetOre();
+		jewelersTable = new BlockJewelersTable();
 		
 	}
 	
 	public static void register() {
 		registerBlock(garnetBlock);
 		registerBlock(garnetOre);
+		registerBlock(jewelersTable);
 	}
 	
 	private static void registerBlock(Block block){
@@ -36,6 +40,7 @@ public class ModBlocks {
 	public static void registerRenders() {
 		registerRender(garnetBlock);
 		registerRender(garnetOre);
+		registerRender(jewelersTable);
 	}
 	
 	private static void registerRender(Block block) {
