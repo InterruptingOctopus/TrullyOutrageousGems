@@ -6,6 +6,9 @@ import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -21,6 +24,8 @@ import net.minecraft.world.World;
 public class BlockGarnetOre extends Block {
 	
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(.1875, 0, .1875, .75, .5625, .75);
+	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+	
 	
 	public BlockGarnetOre() {
 		super(Material.ROCK);
@@ -30,9 +35,30 @@ public class BlockGarnetOre extends Block {
 		setHardness(5.0F);
 		setResistance(20.0F);
 		setHarvestLevel("pickaxe", 2);
+		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
-	
-	
+	public IBlockState getStateForEntityRender(IBlockState state) {
+		return getDefaultState().withProperty(FACING, EnumFacing.SOUTH);
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta) {
+		EnumFacing facing = EnumFacing.getFront(meta);
+			if(facing.getAxis()==EnumFacing.Axis.Y) {
+				facing=EnumFacing.NORTH;
+			}
+		return getDefaultState().withProperty(FACING, facing);
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		return ((EnumFacing) state.getValue(FACING)).getIndex();
+		}
+
+	@Override
+		protected BlockStateContainer createBlockState() {
+			return new BlockStateContainer(this, new IProperty[]{FACING});
+		}
 
 	@Override
 	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {

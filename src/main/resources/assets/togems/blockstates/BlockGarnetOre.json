@@ -1,6 +1,11 @@
 {
     "variants": {
         "normal": { "model": "togems:garnetOre" }
-        
+        "facing=up": { "model": "MyMod:Armchair" },
+        "facing=south": { "model": "MyMod:Armchair" },
+        "facing=east": { "model": "MyMod:Armchair", "y": 270 },
+        "facing=west": { "model": "MyMod:Armchair", "y": 90 },
+        "facing=north": { "model": "MyMod:Armchair", "y": 180 }      
     }
+    
 }
