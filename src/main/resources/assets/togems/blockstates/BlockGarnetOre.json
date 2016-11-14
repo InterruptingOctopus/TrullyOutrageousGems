@@ -1,11 +1,11 @@
 {
     "variants": {
         "normal": { "model": "togems:garnetOre" }
-        "facing=up": { "model": "MyMod:Armchair" },
-        "facing=south": { "model": "MyMod:Armchair" },
-        "facing=east": { "model": "MyMod:Armchair", "y": 270 },
-        "facing=west": { "model": "MyMod:Armchair", "y": 90 },
-        "facing=north": { "model": "MyMod:Armchair", "y": 180 }      
+        "facing=up": { "model": "togems:garnetOre" },
+        "facing=south": { "model": "togems:garnetOre" },
+        "facing=east": { "model": "togems:garnetOre", "y": 270 },
+        "facing=west": { "model": "togems:garnetOre", "y": 90 },
+        "facing=north": { "model": "togems:garnetOre", "y": 180 }      
     }
     
 }
