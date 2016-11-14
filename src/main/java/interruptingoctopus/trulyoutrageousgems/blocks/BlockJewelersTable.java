@@ -15,8 +15,8 @@ public class BlockJewelersTable extends Block {
 		setUnlocalizedName(Reference.TogemsBlocks.JEWELERSTABLE.getUnlocalizedName());
 		setRegistryName(Reference.TogemsBlocks.JEWELERSTABLE.getRegistryName());
 		setCreativeTab(TrulyOutrageousGems.CREATIVE_TAB);
-		setHardness(5.0F);
-		setResistance(20.0F);
+		setHardness(3.0F);
+		setResistance(10.0F);
 		setHarvestLevel("axe", 0);
 		}
 	
