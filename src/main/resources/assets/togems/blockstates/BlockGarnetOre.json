@@ -1,11 +1,13 @@
 {
     "variants": {
-        "normal": { "model": "togems:garnetOre" }
-        "facing=up": { "model": "togems:garnetOre" },
-        "facing=south": { "model": "togems:garnetOre" },
-        "facing=east": { "model": "togems:garnetOre", "y": 270 },
-        "facing=west": { "model": "togems:garnetOre", "y": 90 },
-        "facing=north": { "model": "togems:garnetOre", "y": 180 }     
+        //"normal": { "model": "togems:garnetOre" }
+        "facing=north": { "model": "togems:garnetOre", "y": 180},  
+        "facing=south": { "model": "togems:garnetOre", "y": 180 },
+        "facing=east": { "model": "togems:garnetOre", "y": 90},
+        "facing=west": { "model": "togems:garnetOre", "y": 270},
+        "facing=up": { "model": "togems:garnetOre", "x": 270},
+        "facing=down": {"model": "togems:garnetOre", "x": 90}
+           
     }
     
 }
