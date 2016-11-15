@@ -3,13 +3,6 @@
     "textures": {
         "0": "blocks/stone",
         "1": "togems:blocks/garnetOre"
-        "particle": "togems:blocks/garnetOre"
-        "north": "togems:blocks/garnetOre"
-        "south": "togems:blocks/garnetOre"
-        "east": "togems:blocks/garnetOre"
-        "west": "togems:blocks/garnetOre"
-        "up": "togems:blocks/garnetOre"
-        "down": "togems:blocks/garnetOre"
     },
         "display": {
         "gui": {

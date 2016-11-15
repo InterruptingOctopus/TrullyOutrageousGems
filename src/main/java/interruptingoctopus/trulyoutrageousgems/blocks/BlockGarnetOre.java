@@ -54,7 +54,7 @@ public class BlockGarnetOre extends Block {
 	
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return super.getMetaFromState(state);
+		return state.getValue(FACING).getIndex();
 	}
 	
 	@Override
