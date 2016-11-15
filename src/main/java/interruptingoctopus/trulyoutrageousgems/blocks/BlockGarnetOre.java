@@ -53,6 +53,11 @@ public class BlockGarnetOre extends Block {
 	}
 	
 	@Override
+	public int getMetaFromState(IBlockState state) {
+		return super.getMetaFromState(state);
+	}
+	
+	@Override
 	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
 		return ModItems.garnet;
 	};

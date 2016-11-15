@@ -1,6 +1,6 @@
 {
     "variants": {
-        //"normal": { "model": "togems:garnetOre" }
+        "normal": { "model": "togems:garnetOre" },
         "facing=north": { "model": "togems:garnetOre", "y": 180},  
         "facing=south": { "model": "togems:garnetOre", "y": 180 },
         "facing=east": { "model": "togems:garnetOre", "y": 90},
