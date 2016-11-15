@@ -6,6 +6,7 @@ import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPistonBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -13,6 +14,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -25,7 +27,7 @@ import net.minecraft.world.World;
 public class BlockGarnetOre extends Block {
 	
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(.1875, 0, .1875, .75, .5625, .75);
-	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+	public static final PropertyDirection FACING = PropertyDirection.create("facing");
 	
 	
 	public BlockGarnetOre() {
@@ -38,29 +40,18 @@ public class BlockGarnetOre extends Block {
 		setHarvestLevel("pickaxe", 2);
 		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
-	public IBlockState getStateForEntityRender(IBlockState state) {
-		return getDefaultState().withProperty(FACING, EnumFacing.SOUTH);
+	
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] {FACING});
+	};
+	
+	@Override
+	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
+			int meta, EntityLivingBase placer) {
+		return super.onBlockPlaced(worldIn, pos, BlockPistonBase.getFacingFromEntity(pos, placer), hitX, hitY, hitZ, meta, placer);
 	}
-
-	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		EnumFacing facing = EnumFacing.getFront(meta);
-			if(facing.getAxis()==EnumFacing.Axis.Y) {
-				facing=EnumFacing.NORTH;
-			}
-		return getDefaultState().withProperty(FACING, facing);
-	}
-
-	@Override
-	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getIndex();
-		}
-
-	@Override
-		protected BlockStateContainer createBlockState() {
-			return new BlockStateContainer(this, new IProperty[]{FACING});
-		}
-
+	
 	@Override
 	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
 		return ModItems.garnet;
