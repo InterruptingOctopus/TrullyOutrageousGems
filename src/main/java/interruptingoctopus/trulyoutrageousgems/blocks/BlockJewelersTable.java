@@ -25,7 +25,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockJewelersTable extends BlockContainer{
+public class BlockJewelersTable extends BlockContainer implements ITileEntityProvider{
 	
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	private static boolean hasTileEntity;
@@ -69,7 +69,7 @@ public class BlockJewelersTable extends BlockContainer{
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return null;
+		return new TileEntityJewelersTable();
 	}
 	
 	//tile entity properties
