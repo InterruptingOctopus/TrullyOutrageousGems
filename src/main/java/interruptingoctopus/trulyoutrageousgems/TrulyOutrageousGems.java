@@ -1,11 +1,11 @@
 package interruptingoctopus.trulyoutrageousgems;
 
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockJewelersTable;
+import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
+import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.TileEntityJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import interruptingoctopus.trulyoutrageousgems.init.ModCrafting;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import interruptingoctopus.trulyoutrageousgems.proxy.CommonProxy;
-import interruptingoctopus.trulyoutrageousgems.tileentity.TileEntityJewelersTable;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;

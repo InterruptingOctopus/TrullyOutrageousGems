@@ -1,9 +1,8 @@
-package interruptingoctopus.trulyoutrageousgems.blocks;
+package interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable;
 
 import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
-import interruptingoctopus.trulyoutrageousgems.tileentity.TileEntityJewelersTable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
@@ -66,13 +65,14 @@ public class BlockJewelersTable extends BlockContainer implements ITileEntityPro
 			return BlockRenderLayer.TRANSLUCENT;
 		}
 	*/
-
+	
+	//tile entity properties
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileEntityJewelersTable();
 	}
 	
-	//tile entity properties
+	
 	
 
 }

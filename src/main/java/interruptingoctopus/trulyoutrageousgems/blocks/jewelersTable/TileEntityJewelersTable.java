@@ -1,6 +1,5 @@
-package interruptingoctopus.trulyoutrageousgems.tileentity;
+package interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable;
 
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockJewelersTable;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.item.ItemStack;
