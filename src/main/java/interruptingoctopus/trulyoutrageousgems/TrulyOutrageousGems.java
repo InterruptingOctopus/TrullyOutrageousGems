@@ -1,5 +1,6 @@
 package interruptingoctopus.trulyoutrageousgems;
 
+import interruptingoctopus.trulyoutrageousgems.blocks.BlockJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import interruptingoctopus.trulyoutrageousgems.init.ModCrafting;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
@@ -25,6 +26,7 @@ public class TrulyOutrageousGems {
 	public static CommonProxy proxy;
 	
 	public static final CreativeTabs CREATIVE_TAB = new TrulyOutrageousGemsTab();
+	public final static BlockJewelersTable blockJewelersTable = new BlockJewelersTable();
 	
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event)

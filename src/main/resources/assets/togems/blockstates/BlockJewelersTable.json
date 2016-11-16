@@ -1,6 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "togems:jewelersTable" }
         "facing=north": { "model": "togems:jewelersTable", "y": 90},  
         "facing=south": { "model": "togems:jewelersTable", "y": 270},
         "facing=east": { "model": "togems:jewelersTable", "y": 90 },

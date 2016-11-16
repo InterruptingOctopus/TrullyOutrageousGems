@@ -5,6 +5,8 @@ import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import interruptingoctopus.trulyoutrageousgems.tileentity.TileEntityJewelersTable;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.BlockPistonBase;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -23,14 +25,16 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockJewelersTable extends Block implements ITileEntityProvider{
+public class BlockJewelersTable extends BlockContainer{
 	
-	public static final PropertyDirection FACING = PropertyDirection.create("facing");
+	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+	private static boolean hasTileEntity;
 
 	public BlockJewelersTable() {
 		super(Material.WOOD);
 		setUnlocalizedName(Reference.TogemsBlocks.JEWELERSTABLE.getUnlocalizedName());
 		setRegistryName(Reference.TogemsBlocks.JEWELERSTABLE.getRegistryName());
+		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		setCreativeTab(TrulyOutrageousGems.CREATIVE_TAB);
 		setHardness(3.0F);
 		setResistance(10.0F);
@@ -39,28 +43,11 @@ public class BlockJewelersTable extends Block implements ITileEntityProvider{
 		}
 	
 	//rotation properties
-	
-		@Override
-		protected BlockStateContainer createBlockState() {
-			return new BlockStateContainer(this, new IProperty[] {FACING});
-		};
+	@Override
+	protected BlockStateContainer createBlockState() {
 		
-		@Override
-		public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
-				int meta, EntityLivingBase placer) {
-			return super.onBlockPlaced(worldIn, pos, BlockPistonBase.getFacingFromEntity(pos, placer), hitX, hitY, hitZ, meta, placer);
-		}
-		
-		@Override
-		public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer,
-				ItemStack stack) {
-			worldIn.setBlockState(pos, state.withProperty(FACING, BlockPistonBase.getFacingFromEntity(pos, placer)), 2);
-		}
-		
-		@Override
-		public int getMetaFromState(IBlockState state) {
-			return state.getValue(FACING).getIndex();
-		}
+		return new BlockStateContainer(this, FACING);
+	} 
 	
 	//block properties
 	
@@ -79,32 +66,21 @@ public class BlockJewelersTable extends Block implements ITileEntityProvider{
 			return BlockRenderLayer.TRANSLUCENT;
 		}
 	*/
-	
-	//tile entity properties
-	
-	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if(!worldIn.isRemote){
-			TileEntity tileEntity = worldIn.getTileEntity(pos);
-			if(tileEntity instanceof TileEntityJewelersTable) {
-				TileEntityJewelersTable jewelersTable = (TileEntityJewelersTable) tileEntity;
-				if(heldItem != null){
-					if(heldItem.getItem() == ModItems.garnet){
-						if(jewelersTable.addGarnet()){
-							heldItem.stackSize--;
-							return true;
-						}
-					}
-				}
-				jewelersTable.removeGarnet();
-			}
-		}
-		return true;
-	}
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TileEntityJewelersTable();
+		return null;
 	}
 	
+	//tile entity properties
+	public void onBlockClicked(World world, BlockPos pos, EntityPlayer player) {
+		
+		TileEntity tile = world.getTileEntity(pos);
+		if (!world.isRemote && !player.capabilities.isCreativeMode)
+		{
+			if (tile != null && tile instanceof TileEntityJewelersTable)
+				leftClick(tile, player);
+		}
+	}
+
 }
