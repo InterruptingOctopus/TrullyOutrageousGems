@@ -74,9 +74,8 @@ public class BlockGarnetOre extends Block {
 	
 	//block properties
 	
-	@Override
-	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
-		return ModItems.garnet;
+	public int getItemDropped(IBlockState state) {
+		return 0;
 	};
 	
 	@Override

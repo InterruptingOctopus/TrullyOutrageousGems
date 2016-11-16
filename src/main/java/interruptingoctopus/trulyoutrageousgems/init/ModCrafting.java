@@ -7,9 +7,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModCrafting {
 
 	public static void register(){
-		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.garnetBlock), "GGG","GGG","GGG", 'G', ModItems.garnet);
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.garnet, 9), ModBlocks.garnetBlock);
-		GameRegistry.addSmelting(ModBlocks.garnetOre, new ItemStack(ModItems.garnet, 1), 1F);
+		//garnet
+		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.garnetBlock), "GGG","GGG","GGG", 'G', new ItemStack(ModItems.gem, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.gem, 9, 0), ModBlocks.garnetBlock);
+		GameRegistry.addSmelting(ModBlocks.garnetOre, new ItemStack(ModItems.gem, 1, 0), 1F);
+		//benches
 		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.jewelersTable), " S ","LCL","LPL", 'S', Blocks.STONE_SLAB,'L', Blocks.LOG, 'C', Blocks.CHEST,'P', Blocks.WOODEN_SLAB);
 	}
 }

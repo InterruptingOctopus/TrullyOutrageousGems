@@ -11,7 +11,7 @@ public class Reference {
 	public static final String SERVER_PROXY_CLASS = "interruptingoctopus.trulyoutrageousgems.proxy.ServerProxy";
 	
 	public static enum TogemsItems{
-		GARNET("garnet", "ItemGarnet");
+		GARNET("garnet", "ItemGem");
 		
 		private String unlocalizedName;
 		private String registryName;

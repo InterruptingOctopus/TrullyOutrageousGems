@@ -1,4 +1,4 @@
-package interruptingoctopus.trulyoutrageousgems.items;
+/**package interruptingoctopus.trulyoutrageousgems.items;
 
 import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
@@ -14,3 +14,4 @@ public class ItemGarnet extends Item {
 	}
 
 }
+*/

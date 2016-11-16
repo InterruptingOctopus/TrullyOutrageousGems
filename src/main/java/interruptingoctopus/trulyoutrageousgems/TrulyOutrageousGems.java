@@ -45,6 +45,7 @@ public class TrulyOutrageousGems {
 	{
 		System.out.println("Init");
 		proxy.init();
+		proxy.registerModelBakeryVariants();
 		
 		ModCrafting.register();
 		
