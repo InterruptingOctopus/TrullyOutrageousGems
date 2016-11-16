@@ -73,14 +73,6 @@ public class BlockJewelersTable extends BlockContainer{
 	}
 	
 	//tile entity properties
-	public void onBlockClicked(World world, BlockPos pos, EntityPlayer player) {
-		
-		TileEntity tile = world.getTileEntity(pos);
-		if (!world.isRemote && !player.capabilities.isCreativeMode)
-		{
-			if (tile != null && tile instanceof TileEntityJewelersTable)
-				leftClick(tile, player);
-		}
-	}
+	
 
 }
