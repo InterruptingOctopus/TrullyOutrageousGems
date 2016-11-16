@@ -29,6 +29,12 @@ public class BlockGarnetOre extends Block {
 	
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(.1875, 0, .1875, .75, .5625, .75);
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");
+	protected static final AxisAlignedBB BOUNDING_BOX_EAST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.75D, 1.0D, 1.0D);
+    protected static final AxisAlignedBB BOUNDING_BOX_WEST_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
+    protected static final AxisAlignedBB BOUNDING_BOX_SOUTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.75D);
+    protected static final AxisAlignedBB BOUNDING_BOX_NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.25D, 1.0D, 1.0D, 1.0D);
+    protected static final AxisAlignedBB BOUNDING_BOX_UP_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.75D, 1.0D);
+    protected static final AxisAlignedBB BOUNDING_BOX_DOWN_AABB = new AxisAlignedBB(0.0D, 0.25D, 0.0D, 1.0D, 1.0D, 1.0D);
 	
 	
 	public BlockGarnetOre() {
@@ -41,6 +47,8 @@ public class BlockGarnetOre extends Block {
 		setHarvestLevel("pickaxe", 2);
 		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
+	
+	//rotation properties
 	
 	@Override
 	protected BlockStateContainer createBlockState() {
@@ -64,6 +72,8 @@ public class BlockGarnetOre extends Block {
 		return state.getValue(FACING).getIndex();
 	}
 	
+	//block properties
+	
 	@Override
 	public net.minecraft.item.Item getItemDropped(IBlockState state, java.util.Random rand, int fortune) {
 		return ModItems.garnet;
@@ -86,7 +96,34 @@ public class BlockGarnetOre extends Block {
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		return BOUNDING_BOX;
+		if (state.getValue(FACING) != null){
+            switch ((EnumFacing)state.getValue(FACING))
+            {
+                case DOWN:
+                    return BOUNDING_BOX_DOWN_AABB;
+
+                case UP:
+                default:
+                    return BOUNDING_BOX_UP_AABB;
+
+                case NORTH:
+                    return BOUNDING_BOX_NORTH_AABB;
+
+                case SOUTH:
+                    return BOUNDING_BOX_SOUTH_AABB;
+
+                case WEST:
+                    return BOUNDING_BOX_WEST_AABB;
+
+                case EAST:
+                    return BOUNDING_BOX_EAST_AABB;
+            }
+        }
+        else
+        {
+        	return BOUNDING_BOX;
+        }
+		
 	}
 	
 	@Override
