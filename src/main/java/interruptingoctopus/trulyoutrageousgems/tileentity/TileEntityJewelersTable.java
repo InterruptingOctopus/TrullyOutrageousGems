@@ -1,5 +1,8 @@
 package interruptingoctopus.trulyoutrageousgems.tileentity;
 
-public class TileEntityJewelersTable {
+import net.minecraft.block.BlockContainer;
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityJewelersTable extends TileEntity{
 
 }
