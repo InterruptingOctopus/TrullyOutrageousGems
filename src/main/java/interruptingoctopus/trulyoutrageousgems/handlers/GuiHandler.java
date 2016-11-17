@@ -1,4 +1,4 @@
-package interruptingoctopus.trulyoutrageousgems.init;
+package interruptingoctopus.trulyoutrageousgems.handlers;
 
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.GuiJewelersTable;

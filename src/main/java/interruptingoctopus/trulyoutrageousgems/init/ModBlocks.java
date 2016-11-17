@@ -3,10 +3,6 @@ package interruptingoctopus.trulyoutrageousgems.init;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bc0e6b7e990ef7c96f528697d3846a4a38e8538
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
