@@ -2,6 +2,7 @@ package interruptingoctopus.trulyoutrageousgems;
 
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.TileEntityJewelersTable;
+import interruptingoctopus.trulyoutrageousgems.init.GuiHandler;
 import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import interruptingoctopus.trulyoutrageousgems.init.ModCrafting;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
@@ -9,7 +10,6 @@ import interruptingoctopus.trulyoutrageousgems.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -38,6 +38,10 @@ public class TrulyOutrageousGems {
 		
 		ModBlocks.init();
 		ModBlocks.register();
+		
+		GuiHandler.init();
+		
+		GameRegistry.registerTileEntity(TileEntityJewelersTable.class, Reference.MOD_ID + "TileEntityJewelersTable");
 	}
 	
 	@EventHandler
@@ -45,10 +49,7 @@ public class TrulyOutrageousGems {
 	{
 		System.out.println("Init");
 		proxy.init();
-		
 		ModCrafting.register();
-		
-		GameRegistry.registerTileEntity(TileEntityJewelersTable.class, Reference.MOD_ID + "TileEntityJewelersTable");
 	}
 	
 	@EventHandler
