@@ -1,7 +1,16 @@
-item.garnet.name=Garnet
+item.gem.garnet.name=Garnet
+item.gem.amethyst.name=Amethyst
+item.gem.pearl.name=Pearl
 
 tile.garnetBlock.name=Garnet Block
+tile.amethystBlock.name=Amethyst Block
+tile.pearlBlock.name=Pearl Block
+tile._Block.name=_ Block
+
 tile.garnetOre.name=Garnet Ore
+tile.amethystOre.name=Amethyst Ore
+tile._Ore.name=_ Ore
+
 tile.jewelersTable.name=Jeweler's Table
 
 itemGroup.tabTrulyOutrageousGems=Truly Outrageous Gems
