@@ -15,6 +15,10 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
+<<<<<<< HEAD
+=======
+// import net.minecraft.util.BlockRenderLayer;
+>>>>>>> master
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
