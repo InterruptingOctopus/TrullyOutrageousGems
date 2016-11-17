@@ -12,6 +12,7 @@ public class ClientProxy implements CommonProxy{
 	public void init() {
 		ModItems.registerRenders();
 		ModBlocks.registerRenders();
+		registerModelBakeryVariants();
 	}
 	
 	@Override
