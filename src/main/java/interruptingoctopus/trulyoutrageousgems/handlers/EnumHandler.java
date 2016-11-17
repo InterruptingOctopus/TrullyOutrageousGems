@@ -18,7 +18,7 @@ public class EnumHandler {
 		}
 		
 		public int getMetadata() {
-			return meta;
+			return this.meta;
 		}
 		
 		public String getName() {

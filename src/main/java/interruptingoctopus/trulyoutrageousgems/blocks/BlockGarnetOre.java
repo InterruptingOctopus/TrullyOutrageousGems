@@ -1,9 +1,12 @@
 package interruptingoctopus.trulyoutrageousgems.blocks;
 
 import java.util.List;
+import java.util.Random;
 
 import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
+import interruptingoctopus.trulyoutrageousgems.handlers.EnumHandler;
+import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -11,6 +14,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
 // import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -65,8 +69,13 @@ public class BlockGarnetOre extends Block {
 	
 	//block properties
 	
-	public int getItemDropped(IBlockState state) {
-		return 1;
+	@Override
+	public int damageDropped(IBlockState state) {
+		return EnumHandler.GemTypes.GARNET.getMetadata();
+	}
+	
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return ModItems.gem;
 	};
 	
 	@Override
