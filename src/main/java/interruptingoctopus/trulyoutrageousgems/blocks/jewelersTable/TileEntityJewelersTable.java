@@ -57,7 +57,7 @@ public class TileEntityJewelersTable extends TileEntity{
 	
 	@Override
 	public <T> T getCapability(Capability<T> cap, EnumFacing facing) {
-		if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return (T) inv;
+		if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return CapabilityItemHandler.ITEM_HANDLER_CAPABILITY.cast(inv);
 		return super.getCapability(cap, facing);
 	}
 	

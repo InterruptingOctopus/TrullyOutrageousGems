@@ -9,7 +9,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.SlotItemHandler;
 
 public class ContainerJewelersTable extends Container {
 	
@@ -47,7 +46,7 @@ public class ContainerJewelersTable extends Container {
 		int y = 17;
 		for (int row = 0; row < itemHandler.getSlots() / 9; ++row) {
 			for (int col = 0; col < 9; ++col) {
-				addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex, x, y));
+				addSlotToContainer(new SlotJew(itemHandler, slotIndex, x, y));
 				slotIndex++;
 				x += 18;
 			}
