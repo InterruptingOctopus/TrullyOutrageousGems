@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north": { "model": "togems:amethystOre", "x": 90},  
+        "facing=south": { "model": "togems:amethystOre", "x": 270},
+        "facing=east": { "model": "togems:amethystOre", "x": 90, "y": 90},
+        "facing=west": { "model": "togems:amethystOre", "x": 270, "y": 90},
+        "facing=up": { "model": "togems:amethystOre", "x": 0},
+        "facing=down": { "model": "togems:amethystOre", "x": 180}
+           
+    }
+    
+}

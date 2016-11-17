@@ -1,6 +1,5 @@
 package interruptingoctopus.trulyoutrageousgems;
 
-import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.TileEntityJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.handlers.GuiHandler;
 import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
@@ -10,7 +9,6 @@ import interruptingoctopus.trulyoutrageousgems.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

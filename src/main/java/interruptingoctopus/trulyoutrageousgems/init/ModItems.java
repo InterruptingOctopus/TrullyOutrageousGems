@@ -25,11 +25,12 @@ public class ModItems {
 		}
 	}
 	
-	private static void registerRender(Item item) {
+/*	private static void registerRender(Item item) {
 		System.out.println(item.getRegistryName());
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 
 	}
+	*/
 	private static void registerRender(Item item, int meta, String fileName) {
 		System.out.println(item.getRegistryName());
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(fileName));
