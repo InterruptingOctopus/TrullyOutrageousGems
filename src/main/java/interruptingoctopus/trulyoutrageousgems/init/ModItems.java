@@ -9,21 +9,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 	
-	public static Item garnet;
 	public static Item gem;
 
 	public static void init() {
-		//garnet = new ItemGarnet();
 		gem = new ItemGem("gem");
 	}
 	
 	public static void register() {
-		//GameRegistry.register(garnet);
 		GameRegistry.register(gem);
 	}
 	
 	public static void registerRenders() {
-		registerRender(garnet);
 		for (int i = 0; i < EnumHandler.GemTypes.values().length; i++) {
 			registerRender(gem, i, "gem_" + EnumHandler.GemTypes.values()[i].getName());
 		}

@@ -12,7 +12,7 @@ public class TrulyOutrageousGemsTab extends CreativeTabs{
 
 	@Override
 	public Item getTabIconItem() {
-		return ModItems.garnet;
+		return ModItems.gem;
 	}
 	
 	
