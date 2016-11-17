@@ -11,7 +11,7 @@ public class Reference {
 	public static final String SERVER_PROXY_CLASS = "interruptingoctopus.trulyoutrageousgems.proxy.ServerProxy";
 	
 	public static enum TogemsItems{
-		GARNET("garnet", "ItemGem");
+		GEM("gem", "ItemGem");
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -34,7 +34,10 @@ public class Reference {
 	public static enum TogemsBlocks{
 		GARNETBLOCK("garnetBlock", "BlockGarnetBlock"), 
 		GARNETORE("garnetOre", "BlockGarnetOre"),
-		JEWELERSTABLE("jewelersTable", "BlockJewelersTable");
+		AMETHYSTBLOCK("amethystBlock","BlockAmethystBlock"),
+		
+		JEWELERSTABLE("jewelersTable", "BlockJewelersTable"); 
+		
 		
 		private String unlocalizedName;
 		private String registryName;

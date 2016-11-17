@@ -14,6 +14,8 @@ public class ModBlocks {
 	
 	public static Block garnetBlock;
 	public static Block garnetOre;
+	public static Block amethystBlock;
+	public static Block amethystOre;
 	public static Block jewelersTable;
 
 	public static void init() {
@@ -26,6 +28,8 @@ public class ModBlocks {
 	public static void register() {
 		registerBlock(garnetBlock);
 		registerBlock(garnetOre);
+		registerBlock(amethystBlock);
+		registerBlock(amethystOre);
 		registerBlock(jewelersTable);
 	}
 	
@@ -39,6 +43,8 @@ public class ModBlocks {
 	public static void registerRenders() {
 		registerRender(garnetBlock);
 		registerRender(garnetOre);
+		registerRender(amethystBlock);
+		registerRender(amethystOre);
 		registerRender(jewelersTable);
 	}
 	
