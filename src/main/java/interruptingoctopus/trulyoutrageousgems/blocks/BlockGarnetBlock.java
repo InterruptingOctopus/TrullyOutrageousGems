@@ -4,7 +4,6 @@ import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockGarnetBlock extends Block {
 

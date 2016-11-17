@@ -2,6 +2,7 @@ package interruptingoctopus.trulyoutrageousgems;
 
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.TileEntityJewelersTable;
+import interruptingoctopus.trulyoutrageousgems.init.GuiHandler;
 import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import interruptingoctopus.trulyoutrageousgems.init.ModCrafting;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
@@ -26,7 +27,6 @@ public class TrulyOutrageousGems {
 	public static CommonProxy proxy;
 	
 	public static final CreativeTabs CREATIVE_TAB = new TrulyOutrageousGemsTab();
-	public final static BlockJewelersTable blockJewelersTable = new BlockJewelersTable();
 	
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event)
@@ -38,6 +38,10 @@ public class TrulyOutrageousGems {
 		
 		ModBlocks.init();
 		ModBlocks.register();
+		
+		GuiHandler.init();
+		
+		GameRegistry.registerTileEntity(TileEntityJewelersTable.class, Reference.MOD_ID + "TileEntityJewelersTable");
 	}
 	
 	@EventHandler
@@ -45,11 +49,12 @@ public class TrulyOutrageousGems {
 	{
 		System.out.println("Init");
 		proxy.init();
+<<<<<<< HEAD
 		proxy.registerModelBakeryVariants();
 		
+=======
+>>>>>>> 2bc0e6b7e990ef7c96f528697d3846a4a38e8538
 		ModCrafting.register();
-		
-		GameRegistry.registerTileEntity(TileEntityJewelersTable.class, Reference.MOD_ID + "TileEntityJewelersTable");
 	}
 	
 	@EventHandler
