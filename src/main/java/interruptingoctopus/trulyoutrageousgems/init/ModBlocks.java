@@ -1,5 +1,7 @@
 package interruptingoctopus.trulyoutrageousgems.init;
 
+import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystBlock;
+import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystOre;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
@@ -22,6 +24,8 @@ public class ModBlocks {
 	public static void init() {
 		garnetBlock = new BlockGarnetBlock();
 		garnetOre = new BlockGarnetOre();
+		amethystBlock = new BlockAmethystBlock();
+		amethystOre = new BlockAmethystOre();
 		jewelersTable = new BlockJewelersTable();
 		
 	}
