@@ -48,8 +48,14 @@ public class TrulyOutrageousGems {
 	public void init(FMLInitializationEvent event)
 	{
 		System.out.println("Init");
+		
 		proxy.init();
+<<<<<<< HEAD
 
+=======
+		proxy.registerModelBakeryVariants();
+		
+>>>>>>> master
 		ModCrafting.register();
 	}
 	
