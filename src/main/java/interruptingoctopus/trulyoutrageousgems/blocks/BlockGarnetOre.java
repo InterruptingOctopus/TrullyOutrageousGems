@@ -5,10 +5,7 @@ import java.util.Random;
 
 import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.TrulyOutrageousGems;
-<<<<<<< Updated upstream
 import interruptingoctopus.trulyoutrageousgems.handlers.EnumHandler;
-=======
->>>>>>> Stashed changes
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -17,11 +14,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-<<<<<<< Updated upstream
 import net.minecraft.item.Item;
-// import net.minecraft.util.BlockRenderLayer;
-=======
->>>>>>> Stashed changes
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -75,7 +68,7 @@ public class BlockGarnetOre extends Block {
 	
 	//block properties
 	
-<<<<<<< Updated upstream
+
 	@Override
 	public int damageDropped(IBlockState state) {
 		return EnumHandler.GemTypes.GARNET.getMetadata();
@@ -83,10 +76,7 @@ public class BlockGarnetOre extends Block {
 	
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return ModItems.gem;
-=======
-	public int getItemDropped(IBlockState state) {
-		return 0;
->>>>>>> Stashed changes
+
 	};
 	
 	@Override
@@ -98,11 +88,6 @@ public class BlockGarnetOre extends Block {
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
-	
-/*	@Override
-	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.TRANSLUCENT;
-	} */
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
