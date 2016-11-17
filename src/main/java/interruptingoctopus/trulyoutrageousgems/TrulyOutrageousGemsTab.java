@@ -15,6 +15,9 @@ public class TrulyOutrageousGemsTab extends CreativeTabs{
 		return ModItems.gem;
 	}
 	
+	public int getItemIconDamage(){
+		return 0;
+	}
 	
 
 }
