@@ -21,19 +21,14 @@ public class ModItems {
 	
 	public static void registerRenders() {
 		for (int i = 0; i < EnumHandler.GemTypes.values().length; i++) {
-			registerRender(gem, i, "gem_" + EnumHandler.GemTypes.values()[i].getName());
+			String itemModelName = "gem_" + EnumHandler.GemTypes.values()[i].getName();
+			registerRender(gem, i, itemModelName);
 		}
 	}
 	
-/*	private static void registerRender(Item item) {
-		System.out.println(item.getRegistryName());
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-
-	}
-	*/
 	private static void registerRender(Item item, int meta, String fileName) {
 		System.out.println(item.getRegistryName());
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(fileName));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation("togems:" + fileName, "inventory"));
 
 	}
 }

@@ -12,11 +12,6 @@ public class ClientProxy implements CommonProxy{
 	public void init() {
 		ModItems.registerRenders();
 		ModBlocks.registerRenders();
-		registerModelBakeryVariants();
-	}
-	
-	@Override
-	public void registerModelBakeryVariants() {
 		ModelBakery.registerItemVariants(ModItems.gem, new ResourceLocation(Reference.MOD_ID, "gem_garnet"), new ResourceLocation(Reference.MOD_ID, "gem_amethyst"), new ResourceLocation(Reference.MOD_ID, "gem_pearl"));
 	}
 

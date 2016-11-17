@@ -20,23 +20,24 @@ public class ItemGem extends Item{
 	}
 	
 	@Override
+	public int getMetadata(int meta) {
+		return meta;
+	}
+	
+	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List<ItemStack> Items) {
 		for(int i = 0; i < GemTypes.values().length; i++) {
-			Items.add(new ItemStack(item, 2, i));
+			Items.add(new ItemStack(item, 1, i));
 		}
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		for(int i = 0; i < GemTypes.values().length; i++) {
-			if(stack.getItemDamage() == i) {
-				return this.getUnlocalizedName() + "." + GemTypes.values()[i].getName();
-			}
-			else{
-				continue;
-			}
+		int meta = stack.getMetadata();
+		if (meta < 0 || meta >= GemTypes.values().length) {
+			return this.getUnlocalizedName() + "." + GemTypes.GARNET.getName();
 		}
-		return this.getUnlocalizedName() + "." + GemTypes.GARNET.getName();
+		return this.getUnlocalizedName() + "." + GemTypes.values()[meta].getName();
 	}
 
 }
