@@ -8,23 +8,21 @@ public class EnumHandler {
 		GARNET("garnet", 0),
 		AMETHYST("amethyst", 1),
 		PEARL("pearl", 2);
-		;
 		
-		private int ID;
 		private String name;
+		private int meta;
 		
-		private GemTypes(String name, int ID) {
-			this.ID = ID;
+		private GemTypes(String name, int meta) {
+			this.meta = meta;
 			this.name = name;
 		}
 		
-		@Override
-		public String getName(){
-			return this.name;
+		public int getMetadata() {
+			return meta;
 		}
 		
-		public int getID(){
-			return ID;
+		public String getName() {
+			return this.name;
 		}
 		
 		@Override

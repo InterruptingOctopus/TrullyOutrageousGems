@@ -48,7 +48,6 @@ public class TrulyOutrageousGems {
 		System.out.println("Init");
 		
 		proxy.init();
-		
 		ModCrafting.register();
 	}
 	
