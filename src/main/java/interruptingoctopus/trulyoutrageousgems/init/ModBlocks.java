@@ -4,6 +4,7 @@ import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystOre;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
+import interruptingoctopus.trulyoutrageousgems.blocks.BlockPearlBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
 
 import net.minecraft.block.Block;
@@ -19,6 +20,7 @@ public class ModBlocks {
 	public static Block garnetOre;
 	public static Block amethystBlock;
 	public static Block amethystOre;
+	public static Block pearlBlock;
 	public static Block jewelersTable;
 
 	public static void init() {
@@ -26,6 +28,7 @@ public class ModBlocks {
 		garnetOre = new BlockGarnetOre();
 		amethystBlock = new BlockAmethystBlock();
 		amethystOre = new BlockAmethystOre();
+		pearlBlock = new BlockPearlBlock();
 		jewelersTable = new BlockJewelersTable();
 		
 	}
@@ -35,6 +38,7 @@ public class ModBlocks {
 		registerBlock(garnetOre);
 		registerBlock(amethystBlock);
 		registerBlock(amethystOre);
+		registerBlock(pearlBlock);
 		registerBlock(jewelersTable);
 	}
 	
@@ -50,6 +54,7 @@ public class ModBlocks {
 		registerRender(garnetOre);
 		registerRender(amethystBlock);
 		registerRender(amethystOre);
+		registerRender(pearlBlock);
 		registerRender(jewelersTable);
 	}
 	

@@ -36,6 +36,7 @@ public class Reference {
 		GARNETORE("garnetOre", "BlockGarnetOre"),
 		AMETHYSTBLOCK("amethystBlock","BlockAmethystBlock"),
 		AMETHYSTORE("amethystOre","BlockAmethystOre"),
+		PEARLBLOCK("pearlBlock","BlockPearlBlock"),
 		
 		JEWELERSTABLE("jewelersTable", "BlockJewelersTable"), ; 
 		

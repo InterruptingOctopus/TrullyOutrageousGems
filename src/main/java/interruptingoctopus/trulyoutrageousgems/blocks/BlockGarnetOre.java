@@ -66,7 +66,7 @@ public class BlockGarnetOre extends Block {
 	//block properties
 	
 	public int getItemDropped(IBlockState state) {
-		return 0;
+		return 1;
 	};
 	
 	@Override
