@@ -18,7 +18,7 @@ public class ModItems {
 	}
 	
 	public static void register() {
-		GameRegistry.register(garnet);
+		//GameRegistry.register(garnet);
 		GameRegistry.register(gem);
 	}
 	

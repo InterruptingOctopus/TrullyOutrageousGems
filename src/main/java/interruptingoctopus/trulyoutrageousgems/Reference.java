@@ -35,8 +35,9 @@ public class Reference {
 		GARNETBLOCK("garnetBlock", "BlockGarnetBlock"), 
 		GARNETORE("garnetOre", "BlockGarnetOre"),
 		AMETHYSTBLOCK("amethystBlock","BlockAmethystBlock"),
+		AMETHYSTORE("amethystOre","BlockAmethystOre"),
 		
-		JEWELERSTABLE("jewelersTable", "BlockJewelersTable"); 
+		JEWELERSTABLE("jewelersTable", "BlockJewelersTable"), ; 
 		
 		
 		private String unlocalizedName;
