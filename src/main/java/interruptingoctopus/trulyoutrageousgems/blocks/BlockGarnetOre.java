@@ -25,7 +25,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 
-public class BlockGarnetOre extends Block implements IWorldGenerator{
+public class BlockGarnetOre extends Block{
 	
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(.1875, 0, .1875, .75, .5625, .75);
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");
@@ -115,10 +115,5 @@ public class BlockGarnetOre extends Block implements IWorldGenerator{
 		super.addCollisionBoxToList(pos, entityBox, collidingBoxes, BOUNDING_BOX);
 	}
 
-	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
-			IChunkProvider chunkProvider) {
-		
-	}
 	
 }
