@@ -6,6 +6,7 @@ import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import interruptingoctopus.trulyoutrageousgems.init.ModCrafting;
 import interruptingoctopus.trulyoutrageousgems.init.ModItems;
 import interruptingoctopus.trulyoutrageousgems.proxy.CommonProxy;
+import interruptingoctopus.trulyoutrageousgems.world.ModWorldGen;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -40,6 +41,8 @@ public class TrulyOutrageousGems {
 		GuiHandler.init();
 		
 		GameRegistry.registerTileEntity(TileEntityJewelersTable.class, Reference.MOD_ID + "TileEntityJewelersTable");
+		
+		ModWorldGen.init();
 	}
 	
 	@EventHandler
