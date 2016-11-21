@@ -2,8 +2,6 @@ package interruptingoctopus.trulyoutrageousgems.world;
 
 import java.util.Random;
 
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystOre;
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
 import interruptingoctopus.trulyoutrageousgems.init.ModBlocks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -40,10 +38,10 @@ public class TogemsWorldGenerator implements IWorldGenerator {
 	public static void spawnRandomGem(World world, Random random, BlockPos pos) {
 		int rand = random.nextInt(2);
 		if (rand == 0) {
-			world.setBlockState(pos, BlockGarnetOre.getStateFromMeta(0), 3);
+			world.setBlockState(pos, ModBlocks.garnetOre.getDefaultState(), 3);
 		}
 		if (rand == 1) {
-			world.setBlockState(pos, BlockAmethystOre.getStateFromMeta(0), 3);
+			world.setBlockState(pos, ModBlocks.amethystOre.getDefaultState(), 3);
 		}
 	}
 
