@@ -1,4 +1,4 @@
-package world;
+package interruptingoctopus.trulyoutrageousgems.world;
 
 import java.util.Random;
 

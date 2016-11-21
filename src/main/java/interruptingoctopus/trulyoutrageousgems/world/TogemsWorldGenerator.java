@@ -1,4 +1,4 @@
-package world;
+package interruptingoctopus.trulyoutrageousgems.world;
 
 import java.util.Random;
 
@@ -72,7 +72,7 @@ public class TogemsWorldGenerator implements IWorldGenerator{
 	                        if (WorldGenConfiguration.verboseSpawn) {
 	                            Logging.log("Spawned a crystal at: " + x + "," + y + "," + z);
 	                        }
-	                        ResonatingCrystalTileEntity.spawnRandomCrystal(world, random, new BlockPos(pos.set(x, y+1, z)), 0);
+	                        ResonatingCrystalTileEntity.spawnRandomGem(world, random, new BlockPos(pos.set(x, y+1, z)), 0);
 	                        return;
 	                    }
 	                }

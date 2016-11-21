@@ -1,4 +1,4 @@
-package world;
+package interruptingoctopus.trulyoutrageousgems.world;
 
 import net.minecraftforge.common.config.Configuration;
 
