@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModWorldGen {
 	
 	  public static void init() {
+		  	TogemsWorldGenerator generator = TogemsWorldGenerator.instance;
 	        GameRegistry.registerWorldGenerator(TogemsWorldGenerator.instance, 10);
 	        MinecraftForge.EVENT_BUS.register(TogemsWorldGenerator.instance);
 	    }
