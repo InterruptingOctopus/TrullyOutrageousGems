@@ -1,21 +1,13 @@
 package interruptingoctopus.trulyoutrageousgems.world;
 
-import java.util.Random;
-
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
-import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModWorldGen {
-	
-	  public static void init() {
-		  	TogemsWorldGenerator generator = TogemsWorldGenerator.instance;
-	        GameRegistry.registerWorldGenerator(TogemsWorldGenerator.instance, 10);
-	        MinecraftForge.EVENT_BUS.register(TogemsWorldGenerator.instance);
-	    }
+
+	public static void init() {
+		TogemsWorldGenerator generator = TogemsWorldGenerator.instance;
+		GameRegistry.registerWorldGenerator(generator, 10);
+		MinecraftForge.EVENT_BUS.register(generator);
 	}
+}
