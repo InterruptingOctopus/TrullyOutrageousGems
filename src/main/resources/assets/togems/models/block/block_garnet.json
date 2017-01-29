@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "togems:blocks/garnetBlock"
+        "all": "togems:blocks/block_garnet”
     }
 }

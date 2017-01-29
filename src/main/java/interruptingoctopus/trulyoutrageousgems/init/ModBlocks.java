@@ -1,12 +1,11 @@
 package interruptingoctopus.trulyoutrageousgems.init;
 
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystBlock;
+import interruptingoctopus.trulyoutrageousgems.blocks.BlockGemBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystOre;
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
-import interruptingoctopus.trulyoutrageousgems.blocks.BlockPearlBlock;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
-
+import interruptingoctopus.trulyoutrageousgems.handlers.EnumHandler;
+import interruptingoctopus.trulyoutrageousgems.items.ItemBlockItem;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,30 +15,30 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 	
-	public static Block garnetBlock;
+	public static Block gemBlock;
 	public static Block garnetOre;
-	public static Block amethystBlock;
 	public static Block amethystOre;
-	public static Block pearlBlock;
 	public static Block jewelersTable;
 
 	public static void init() {
-		garnetBlock = new BlockGarnetBlock();
+		gemBlock = new BlockGemBlock("gemBlock");
 		garnetOre = new BlockGarnetOre();
-		amethystBlock = new BlockAmethystBlock();
 		amethystOre = new BlockAmethystOre();
-		pearlBlock = new BlockPearlBlock();
 		jewelersTable = new BlockJewelersTable();
 		
 	}
 	
 	public static void register() {
-		registerBlock(garnetBlock);
+		registerBlock(gemBlock, new ItemBlockItem(gemBlock));
 		registerBlock(garnetOre);
-		registerBlock(amethystBlock);
 		registerBlock(amethystOre);
-		registerBlock(pearlBlock);
 		registerBlock(jewelersTable);
+	}
+	
+	private static void registerBlock(Block block, ItemBlock itemBlock) {
+		GameRegistry.register(block);
+		Item item = itemBlock.setRegistryName(block.getRegistryName());
+		GameRegistry.register(item);
 	}
 	
 	private static void registerBlock(Block block){
@@ -50,17 +49,22 @@ public class ModBlocks {
 	}
 	
 	public static void registerRenders() {
-		registerRender(garnetBlock);
+		for (int i = 0; i < EnumHandler.GemTypes.values().length; i++) {
+			String itemModelName = "block_" + EnumHandler.GemTypes.values()[i].getName();
+			registerRender(gemBlock, i, itemModelName);
+		}
 		registerRender(garnetOre);
-		registerRender(amethystBlock);
 		registerRender(amethystOre);
-		registerRender(pearlBlock);
 		registerRender(jewelersTable);
 	}
 	
 	private static void registerRender(Block block) {
 		System.out.println(block.getRegistryName());
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
-
+	}
+	
+	private static void registerRender(Block block, int meta, String fileName) {
+		System.out.println(block.getRegistryName());
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation("togems:" + fileName, "inventory"));
 	}
 }

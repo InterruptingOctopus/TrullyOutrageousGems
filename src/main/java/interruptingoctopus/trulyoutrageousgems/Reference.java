@@ -32,11 +32,9 @@ public class Reference {
 		}
 	}
 	public static enum TogemsBlocks{
-		GARNETBLOCK("garnetBlock", "BlockGarnetBlock"), 
+		GEMBLOCK("gemBlock", "BlockGemBlock"),
 		GARNETORE("garnetOre", "BlockGarnetOre"),
-		AMETHYSTBLOCK("amethystBlock","BlockAmethystBlock"),
 		AMETHYSTORE("amethystOre","BlockAmethystOre"),
-		PEARLBLOCK("pearlBlock","BlockPearlBlock"),
 		
 		JEWELERSTABLE("jewelersTable", "BlockJewelersTable"), ; 
 		

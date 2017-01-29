@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class ItemGem extends Item{
 	
-	public ItemGem(String unlocalizedName){
+	public ItemGem(String unlocalizedName) {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MOD_ID, unlocalizedName));
 		this.setHasSubtypes(true);
