@@ -21,6 +21,7 @@ public class EnumHandler {
 			return this.meta;
 		}
 		
+		@Override
 		public String getName() {
 			return this.name;
 		}

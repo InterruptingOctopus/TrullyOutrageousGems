@@ -15,6 +15,11 @@ public class ItemBlockItem extends ItemBlock{
 		this.setMaxDamage(0);
 	}
 	
+	public int getMetadata(int meta)
+    {
+        return meta;
+    }
+	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		return super.getUnlocalizedName() + "." + ((IMetaBlockName) this.block).getSpecialName(stack);

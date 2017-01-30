@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=garnet": { "model":"togems:block_garnet" },
+        "type=amethyst": { "model":"togems:block_amethyst" },
+        "type=pearl": { "model":"togems:block_pearl" }
+    }
+}

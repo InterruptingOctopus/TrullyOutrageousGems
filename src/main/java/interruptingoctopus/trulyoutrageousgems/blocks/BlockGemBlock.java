@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class BlockGemBlock extends Block implements IMetaBlockName{
 	
-	public static final PropertyEnum<GemTypes> GEMTYPE = PropertyEnum.create("type", GemTypes.class);
+	public static final PropertyEnum TYPE = PropertyEnum.create("type", GemTypes.class);
 
 	public BlockGemBlock(String unlocalizedName) {
 		super(Material.ROCK);
@@ -28,22 +28,22 @@ public class BlockGemBlock extends Block implements IMetaBlockName{
 		setHardness(5.0F);
 		setResistance(20.0F);
 		setHarvestLevel("pickaxe", 1);
-		setDefaultState(blockState.getBaseState().withProperty(GEMTYPE, GemTypes.GARNET));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, GemTypes.GARNET));
 	}
 	
 	@Override
 	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { GEMTYPE });
+		return new BlockStateContainer(this, new IProperty[] { TYPE });
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((GemTypes)state.getValue(GEMTYPE)).getMetadata();
+		return ((GemTypes)state.getValue(TYPE)).getMetadata();
 	}
 	
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		return getDefaultState().withProperty(GEMTYPE, GemTypes.values()[meta]);
+		return getDefaultState().withProperty(TYPE, GemTypes.values()[meta]);
 	}
 	
 	@Override
@@ -56,6 +56,11 @@ public class BlockGemBlock extends Block implements IMetaBlockName{
 	@Override
 	public String getSpecialName(ItemStack stack) {
 		return GemTypes.values()[stack.getItemDamage()].getName();
+	}
+	
+	@Override
+	public int damageDropped(IBlockState state) {
+		return getMetaFromState(state);
 	}
 	
 }
