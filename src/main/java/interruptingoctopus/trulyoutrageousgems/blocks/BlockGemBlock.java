@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class BlockGemBlock extends Block implements IMetaBlockName{
 	
-	public static final PropertyEnum TYPE = PropertyEnum.create("type", GemTypes.class);
+	public static final PropertyEnum<GemTypes> TYPE = PropertyEnum.create("type", GemTypes.class);
 
 	public BlockGemBlock(String unlocalizedName) {
 		super(Material.ROCK);

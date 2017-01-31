@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "togems:blocks/block_pearl”
-    }
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "togems:blocks/block_pearl"
+	}
 }

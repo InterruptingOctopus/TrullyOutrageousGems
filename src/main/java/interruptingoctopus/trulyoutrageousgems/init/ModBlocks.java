@@ -1,6 +1,7 @@
 package interruptingoctopus.trulyoutrageousgems.init;
 
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGemBlock;
+import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockAmethystOre;
 import interruptingoctopus.trulyoutrageousgems.blocks.BlockGarnetOre;
 import interruptingoctopus.trulyoutrageousgems.blocks.jewelersTable.BlockJewelersTable;
@@ -50,7 +51,7 @@ public class ModBlocks {
 	
 	public static void registerRenders() {
 		for (int i = 0; i < EnumHandler.GemTypes.values().length; i++) {
-			String itemModelName = "block_" + EnumHandler.GemTypes.values()[i].getName();
+			String itemModelName = "Block" + EnumHandler.GemTypes.values()[i].getName();
 			registerRender(gemBlock, i, itemModelName);
 		}
 		registerRender(garnetOre);
@@ -65,6 +66,6 @@ public class ModBlocks {
 	
 	private static void registerRender(Block block, int meta, String fileName) {
 		System.out.println(block.getRegistryName());
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation("togems:" + fileName, "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(Reference.MOD_ID + ":" + fileName, "inventory"));
 	}
 }
