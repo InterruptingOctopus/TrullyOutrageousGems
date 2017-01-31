@@ -1,5 +1,6 @@
 package interruptingoctopus.trulyoutrageousgems.init;
 
+import interruptingoctopus.trulyoutrageousgems.Reference;
 import interruptingoctopus.trulyoutrageousgems.handlers.EnumHandler;
 import interruptingoctopus.trulyoutrageousgems.items.ItemGem;
 import net.minecraft.client.Minecraft;
@@ -28,7 +29,7 @@ public class ModItems {
 	
 	private static void registerRender(Item item, int meta, String fileName) {
 		System.out.println(item.getRegistryName());
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation("togems:" + fileName, "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(Reference.MOD_ID + ":" + fileName, "inventory"));
 
 	}
 }

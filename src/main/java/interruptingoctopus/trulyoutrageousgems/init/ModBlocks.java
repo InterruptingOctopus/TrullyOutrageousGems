@@ -51,7 +51,7 @@ public class ModBlocks {
 	
 	public static void registerRenders() {
 		for (int i = 0; i < EnumHandler.GemTypes.values().length; i++) {
-			String itemModelName = "Block" + EnumHandler.GemTypes.values()[i].getName();
+			String itemModelName = "block_" + EnumHandler.GemTypes.values()[i].getName();
 			registerRender(gemBlock, i, itemModelName);
 		}
 		registerRender(garnetOre);
